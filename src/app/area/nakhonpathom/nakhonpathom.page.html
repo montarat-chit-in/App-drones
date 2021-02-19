@@ -1,9 +1,23 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/" mode="md"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content>
+  <div *ngFor="let nakhon of nakhons | async">
+    <ion-slides>
+      <ion-slide>
+        <div class="slide">
+          <h2>{{nakhon.title}}</h2>
+          <div class="imagesize">
+            <img [src]="nakhon.image" />
+          </div>
+          <p>{{nakhon.data}}</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

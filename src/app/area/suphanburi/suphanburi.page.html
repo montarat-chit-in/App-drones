@@ -1,9 +1,31 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/" mode="md"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content> </ion-content>
+<ion-content>
+  <div *ngFor="let supan of supans | async">
+    <ion-slides>
+      <ion-slide>
+        <div class="slide">
+          <h2>{{supan.title}}</h2>
+          <div class="imagesize">
+            <img [src]="supan.image" />
+          </div>
+          <p>{{supan.data}}</p>
+          <p>{{supan.data2}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <p>{{supan.data3}}</p>
+          <div class="imagesize">
+            <img [src]="supan.image2" />
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

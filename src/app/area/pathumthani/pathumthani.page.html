@@ -1,9 +1,31 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/" mode="md"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content>
+  <div *ngFor="let prathum of prathums | async">
+    <ion-slides>
+      <ion-slide>
+        <div class="slide">
+          <div class="imagesize">
+            <img [src]="prathum.image" />
+          </div>
+          <h2>{{prathum.title}}</h2>
+          <p>{{prathum.data}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <p>{{prathum.data2}}</p>
+          <div class="imagesize">
+            <img [src]="prathum.image2" />
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

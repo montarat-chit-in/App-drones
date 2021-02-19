@@ -1,9 +1,31 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/" mode="md"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content>
+  <div *ngFor="let aryut of aryuts | async">
+    <ion-slides>
+      <ion-slide>
+        <div class="slide">
+          <div class="imagesize">
+            <img [src]="aryut.image" />
+          </div>
+          <h2>{{aryut.title}}</h2>
+          <p>{{aryut.data}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <p>{{aryut.data2}}</p>
+          <div class="imagesize">
+            <img [src]="aryut.image2" />
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
