@@ -1,27 +1,70 @@
-#container {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Mitr&display=swap");
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.ion-no-border {
+  ion-toolbar {
+    --background: none;
+  }
+  ion-title {
+    color: #000000;
+    font-size: 20px;
+    font-style: normal;
+    // font-family: "Roboto", sans-serif;
+    font-family: "Taviraj", serif;
+    margin-top: 16px;
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-content {
+  // --background: linear-gradient(to bottom right, #c8d5b9, #4a7c59);
+  --background: url("/assets/img/bg.jpg");
+  background-size: cover;
+  // position: relative;
 }
 
-#container p {
+ion-button {
+  --background: linear-gradient(to bottom right, #50d5b7, #067d68);
+  width: 150px;
+  height: 150px;
+  --border-radius: 30px;
+  margin-left: 12px;
+}
+
+ion-grid {
+  margin-top: 130px;
+}
+p {
+  // font-family: "Roboto", sans-serif;
+  font-family: "Mitr", sans-serif;
+  color: #ffffff;
+  margin-left: 16px;
+  margin-right: 16px;
   font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
 }
-
-#container a {
-  text-decoration: none;
+.helpbutton {
+  height: 40px;
+  width: 40px;
+  background: linear-gradient(to bottom right, #50d5b7, #067d68);
+}
+.bsAction {
+  padding: 29px 22.5px 40px 24.5px;
+}
+.titleandsubtitle h1 {
+  margin: 0 96.5px 0 0.5px;
+  font-size: 20px;
+  color: #000000;
+  font-family: Mitr;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.textsubtitle {
+  margin-left: 5px;
+  margin-right: 20px;
+  font-size: 16px;
+  color: #686868;
+  font-weight: 300;
+  line-height: normal;
+  font-family: Mitr;
 }

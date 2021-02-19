@@ -1,0 +1,47 @@
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let dronekaset of dronekasets | async">
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <div class="slide">
+          <div class="imagesize">
+            <img [src]="dronekaset.image1" />
+          </div>
+          <h2>{{dronekaset.title}}</h2>
+          <p>{{dronekaset.data1}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <h4>{{dronekaset.subtitle1}}</h4>
+          <p>{{dronekaset.data2}}</p>
+          <div class="imagesize">
+            <img [src]="dronekaset.image2" />
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <h4>{{dronekaset.subtitle2}}</h4>
+          <p>{{dronekaset.data3}}</p>
+          <div class="imagesize">
+            <img [src]="dronekaset.image3" />
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <h4>{{dronekaset.subtitle3}}</h4>
+          <p>{{dronekaset.data4}}</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

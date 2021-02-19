@@ -1,0 +1,31 @@
+ion-content {
+  --background: linear-gradient(
+    160deg,
+    rgba(251, 237, 201, 1) 20%,
+    rgba(174, 230, 203, 1) 70%
+  );
+}
+
+ion-back-button {
+  background: rgba(255, 255, 255, 0.8);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: black;
+}
+
+ion-toolbar {
+  ion-buttons {
+    ion-button {
+      @extend ion-back-button;
+      --icon-font-size: 20px;
+      ::ng-deep {
+        .button-inner {
+          width: 24px;
+          height: 24px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

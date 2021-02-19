@@ -1,0 +1,24 @@
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="alltitle" *ngFor="let rice of rices | async">
+    <div class="area">
+      <img
+        class="image"
+        [src]="rice.beforepic"
+        [routerLink]="['/rice/before']"
+      />
+      <p>ขั้นตอนก่อนการทำนา</p>
+    </div>
+    <div class="area">
+      <img class="image" [src]="rice.afterpic" [routerLink]="['/rice/after']" />
+      <p>ขั้นตอนการทำนา</p>
+    </div>
+  </div>
+</ion-content>

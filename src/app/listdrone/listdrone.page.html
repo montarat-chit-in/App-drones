@@ -1,0 +1,165 @@
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngIf="isLoading">
+    <div class="spinner">
+      <ion-spinner name="crescent"></ion-spinner>
+    </div>
+  </ng-container>
+  <div class="container" *ngFor="let listdata of listdatas | async">
+    <ion-slides [options]="slideOpts" loops="true">
+      <ion-slide>
+        <ion-card mode="ios" [routerLink]="['/listdrone/drone-mean']">
+          <img class="image" [src]="listdata.image" />
+
+          <ion-card-header>
+            <ion-card-title>{{listdata.title}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content> {{listdata.subtitle}} </ion-card-content>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card mode="ios" [routerLink]="['/listdrone/drone-type']">
+          <img class="image" [src]="listdata.image1" />
+          <ion-card-header>
+            <ion-card-title>{{listdata.title1}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content> {{listdata.subtitle1}} </ion-card-content>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card mode="ios" [routerLink]="['/listdrone/drone-kraset']">
+          <img class="image" [src]="listdata.image2 " />
+          <ion-card-header>
+            <ion-card-title>{{listdata.title2}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content> {{listdata.subtitle2}} </ion-card-content>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card mode="ios" [routerLink]="['/listdrone/drone-typeofkraset']">
+          <img class="image" [src]="listdata.image3" />
+          <ion-card-header>
+            <ion-card-title>{{listdata.title3}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content> {{listdata.subtitle3}} </ion-card-content>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card mode="ios" [routerLink]="['/listdrone/drone-benefit']">
+          <img class="image" [src]="listdata.image4" />
+          <ion-card-header>
+            <ion-card-title>{{listdata.title4}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content> {{listdata.subtitle4}} </ion-card-content>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card mode="ios" [routerLink]="['/listdrone/drone-law']">
+          <img class="image" [src]="listdata.image5" />
+          <ion-card-header>
+            <ion-card-title>{{listdata.title5}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content> {{listdata.subtitle5}} </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+
+<!-- <div class="video">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/ZAMeTIQhM2Y?start=3"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div> 
+
+
+
+
+
+
+
+
+<!-- <ion-slide>
+        <ion-card mode="ios" [routerLink]="['/listdrone/drone-type']">
+          <img class="image" src="/assets/img/typedrone.jpg" />
+          <ion-card-header>
+            <ion-card-title>ประเภทของโดรน</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            เคยเป็นเครื่องมือที่มีไว้ใช้ในการทหารเพื่อการสอดแนมข้าศึก
+            แต่ปัจจุบันโดรนอนุญาติให้ใช้งานในบุคคลทั่วไปและถูกใช้งานในหลากหลายรูปแบบ
+            โดยจะถูกแบ่งออกเป็น 11 ประเภทตามการใช้งานนั้นๆ...
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card mode="ios" [routerLink]="['/listdrone/drone-kraset']">
+          <img class="image" src="/assets/img/kraset-dronenew.gif" />
+          <ion-card-header>
+            <ion-card-title>โดรนในการเกษตร</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            การใช้โดรนสำหรับการเกษตร
+            ปัจจุบันการทำการเกษตรของไทยมีการพัฒนาไปอย่างมาก
+            โดยเทคโนโลยีเข้ามามีบทบาทเพิ่มมากขึ้นในทุกกระบวนการ
+            ตั้งแต่กระบวนผลิต
+            การใช้เทคโนโลยีเครื่องจักรระบบอัตโนมัติในกระบวนการต่างๆ...
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card mode="ios" [routerLink]="['/listdrone/drone-krasettype']">
+          <img class="image" src="/assets/img/drone-what.jpg" />
+          <ion-card-header>
+            <ion-card-title>ประเภทของโดรนที่ใช้ในการเกษตร</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            สำหรับประโยชน์และปัญหาต่างๆของการใช้โดรนในการเกษตรนั้น...
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card mode="ios" [routerLink]="['/listdrone/drone-benefit']">
+          <img class="image" src="/assets/img/dronewhat.jpg" />
+          <ion-card-header>
+            <ion-card-title
+              >ประโยชน์และปัญหาของการใช้โดรนในการทำการเกษตร</ion-card-title
+            >
+          </ion-card-header>
+          <ion-card-content>
+            สำหรับประโยชน์และปัญหาต่างๆของการใช้โดรนในการเกษตรนั้น...
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card mode="ios" [routerLink]="['/listdrone/drone-law']">
+          <img class="image" src="/assets/img/drone-law-main.png" />
+          <ion-card-header>
+            <ion-card-title>กฎหมายโดรนในไทยที่ควรรู้ </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            ก่อนการนำโดรนมาใช้ทางการเกษตร หรือนำมาใช้งานอื่นๆ
+            ผู้ใช้งานควรศึกษากฏหมายที่เกี่ยวข้องกับการใช้งานโดรนให้เข้าใจก่อน
+            ราชกิจจานุเบกษา และประกาศกระทรวงคมนาคม
+            มีการกำหนดหลักเกณฑ์การอนุญาตและเงื่อนไขในการบังคับหรือปล่อยอากาศยานซึ่งไม่มีนักบิน...
+          </ion-card-content>
+        </ion-card>
+      </ion-slide> -->

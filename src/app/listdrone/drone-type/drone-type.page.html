@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let dronetype of dronetypes | async">
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <div class="slide">
+          <div class="imagesize">
+            <img [src]="dronetype.image" />
+          </div>
+          <h2>{{dronetype.title}}</h2>
+          <p>{{dronetype.data1}}</p>
+          <p>{{dronetype.data2}}</p>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="slide">
+          <p>{{dronetype.data3}}</p>
+          <p>{{dronetype.data4}}</p>
+          <p>{{dronetype.data5}}</p>
+          <p>{{dronetype.data6}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <p>{{dronetype.data7}}</p>
+          <p>{{dronetype.data8}}</p>
+          <p>{{dronetype.data9}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <p>{{dronetype.data10}}</p>
+          <p>{{dronetype.data11}}</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

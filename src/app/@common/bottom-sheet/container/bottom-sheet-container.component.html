@@ -1,0 +1,13 @@
+<div class="bottom-sheet">
+  <div class="bottom-sheet-content">
+    <div
+      class="bottom-sheet-card slide-up"
+      [style.height.px]="isShown ? height : 0"
+      [class.active]="isShown"
+      #content
+    >
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <div class="backdrop" (click)="close()"></div>
+</div>

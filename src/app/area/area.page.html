@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let area of areas | async">
+    <hr class="line" />
+    <div class="area">
+      <img
+        class="image"
+        [src]="area.image1"
+        [routerLink]="['/area/nonthaburi']"
+      />
+      <p>จังหวัด นนทบุรี</p>
+    </div>
+    <hr class="line" />
+    <div class="area">
+      <img
+        class="image"
+        [src]="area.image2"
+        [routerLink]="['/area/pathumthani']"
+      />
+      <p>จังหวัด ปทุมธานี</p>
+    </div>
+    <hr class="line" />
+    <div class="area">
+      <img
+        class="image"
+        [src]="area.image3"
+        [routerLink]="['/area/nakhonpathom']"
+      />
+      <p>จังหวัด นครปฐม</p>
+    </div>
+    <hr class="line" />
+    <div class="area">
+      <img
+        class="image"
+        [src]="area.image4"
+        [routerLink]="['/area/ayutthaya']"
+      />
+      <p>จังหวัด พระนครศรีอยุธยา</p>
+    </div>
+    <hr class="line" />
+    <div class="area">
+      <img
+        class="image"
+        [src]="area.image5"
+        [routerLink]="['/area/suphanburi']"
+      />
+      <p>จังหวัด สุพรรณบุรี</p>
+    </div>
+    <hr class="line" />
+  </div>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let dronetypeofkraset of dronetypeofkrasets | async">
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <div class="slide">
+          <h2>{{dronetypeofkraset.title}}</h2>
+          <div class="imagesize">
+            <img [src]="dronetypeofkraset.image1" />
+          </div>
+          <h4>{{dronetypeofkraset.subtitle1}}</h4>
+          <p>{{dronetypeofkraset.data1}}</p>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="slide">
+          <div class="imagesize">
+            <img [src]="dronetypeofkraset.image2" />
+          </div>
+          <h4>{{dronetypeofkraset.subtitl2}}</h4>
+          <p>{{dronetypeofkraset.data2}}</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

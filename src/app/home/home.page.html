@@ -1,20 +1,76 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-title> โดรนเพื่อการเกษตร </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" style="text-align: center">
+        <ion-button class="button" size="large" [routerLink]="['/listdrone']">
+          <img src="/assets/icon/drone.svg" alt="" />
+        </ion-button>
+        <p>ประเภทของโดรน</p>
+      </ion-col>
+      <ion-col size="6" style="text-align: center">
+        <ion-button class="button" size="large" [routerLink]="['/money']">
+          <img src="/assets/icon/coins.svg" alt="" />
+        </ion-button>
+        <p>ต้นทุนและการเปรียบเทียบ</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6" style="text-align: center">
+        <ion-button class="button" size="large" [routerLink]="['/rice']">
+          <img src="/assets/icon/rice.svg" alt="" />
+        </ion-button>
+        <p>ขั้นตอนการทำนา</p>
+      </ion-col>
+      <ion-col size="6" style="text-align: center">
+        <ion-button class="button" size="large" [routerLink]="['/area']">
+          <img src="/assets/icon/mountain.svg" alt="" />
+        </ion-button>
+        <p>พื้นที่ในการทำนา</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
+<ion-footer class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-icon
+      (click)="presentBottomSheet()"
+      class="helpbutton"
+      slot="end"
+      name="alert-circle"
+    ></ion-icon>
+  </ion-toolbar>
+</ion-footer>
+
+<ng-template #brandConfirmation>
+  <div class="bsAction">
+    <div class="titleandsubtitle">
+      <h1>คำแนะนำในการใช้งาน</h1>
+    </div>
+    <p class="textsubtitle">
+      1.เมื่อเปิดแอพพลิเคชันเข้ามาผู้ใช้จะพบกับหน้าหลักซึ่งมีเมนูแบ่งออกเป็น 4
+      เมนู ผู้ใช้สามารถที่จะเลือกหัวข้อในการดูได้
+    </p>
+    <p class="textsubtitle">
+      2.ภายในเมนูของประเภทของโดรนภายในจะแบ่งหัวข้อออกเป็น
+      โดรนคืออะไร,ประเภทของโดรน,โดรนในการเกษตร,ประเภทของโดรนที่ใช้ในการเกษตร,ประโยชน์,กฎหมายของโดรน
+    </p>
+    <p class="textsubtitle">
+      3.ในเมนูของต้นทุนนั้นจะเป็นเนื้อหาในส่วนของต้นทุนการทำนาและราคาของโดรนในการเกษตร
+    </p>
+    <p class="textsubtitle">
+      4.ในเมนูของขั้นตอนการทำนานั้นภายในจะแบ่งเป็น ขั้นตอนก่อนการทำนาและ
+      การทำนาของชาวนาภาคกลาง
+    </p>
+    <p class="textsubtitle">
+      5.ในส่วนของเมนูพื้นที่ในการทำนานั้นภายในจะมี พื้นที่ทั้งหมด 5 จังหวัด
+      โดยภายในจะเป็นข้อมูลของการทำนาแต่ละจังหวัด
+    </p>
+  </div>
+</ng-template>

@@ -1,0 +1,51 @@
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let before of befores | async">
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <div class="slide">
+          <div class="imagesize">
+            <img [src]="before.beforepic" />
+          </div>
+          <h2>{{before.beforetitle}}</h2>
+          <p>{{before.datatitle}}</p>
+          <h4>{{before.subtitle1}}</h4>
+          <p>{{before.subdata1}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <h4>{{before.subtitle2}}</h4>
+          <p>{{before.subdata2}}</p>
+          <div class="imagesize">
+            <img [src]="before.tainapic1" />
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <h4>{{before.subtitle3}}</h4>
+          <p>{{before.subdata3}}</p>
+          <div class="imagesize">
+            <img [src]="before.tainapic2" />
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <h4>{{before.subtitle4}}</h4>
+          <p>{{before.subdata4v1}}</p>
+          <p>{{before.subdata4v2}}</p>
+          <p>{{before.subdata4v3}}</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

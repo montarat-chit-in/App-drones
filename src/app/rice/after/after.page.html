@@ -1,0 +1,88 @@
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let after of afters | async">
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <div class="slide">
+          <div class="imagesize">
+            <img [src]="after.nadumpic" />
+          </div>
+          <h2>{{after.aftertitle}}</h2>
+          <p>{{after.datatitle}}</p>
+          <h4>{{after.aftersubtitle1}}</h4>
+          <p>{{after.datasubtitle1}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <h4>{{after.nawansubtitle1}}</h4>
+          <p>{{after.nawansubdata1}}</p>
+          <div class="imagesize">
+            <img [src]="after.tumnawanpic" />
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <h4>{{after.nawansubtitle2}}</h4>
+          <p>{{after.nawansubdata2}}</p>
+          <div class="imagesize">
+            <img [src]="after.tumnakardpic" />
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <h4>{{after.nawansubtitle3}}</h4>
+          <p>{{after.nawansubdata3}}</p>
+          <div class="imagesize">
+            <img [src]="after.tumnatompic" />
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <div class="imagesize">
+            <img [src]="after.nadumpic" />
+          </div>
+          <h2>{{after.aftersubtitle2}}</h2>
+          <p>{{after.datasubtitle2}}</p>
+          <h4>{{after.nadumsubtitle1}}</h4>
+          <p>{{after.nadumsubdata1}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <h4>{{after.nadumsubtitle2}}</h4>
+          <p>{{after.nadumsubdata2v1}}</p>
+          <p>{{after.nadumsubdata2v2}}</p>
+          <p>{{after.nadumsubdata2v3}}</p>
+          <p>{{after.nadumsubdata2v4}}</p>
+          <p>{{after.nadumsubdata2v5}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <p>{{after.nadumsubdata2v6}}</p>
+          <p>{{after.nadumsubdata2v7}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <h4>{{after.nadumsubtitle3}}</h4>
+          <p>{{after.nadumsubdata3v1}}</p>
+          <p>{{after.nadumsubdata3v2}}</p>
+          <p>{{after.nadumsubdata3v3}}</p>
+          <p>{{after.nadumsubdata3v4}}</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

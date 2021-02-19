@@ -1,0 +1,48 @@
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let dronelaw of dronelaws | async">
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <div class="slide">
+          <div class="imagesize">
+            <img [src]="dronelaw.image" />
+          </div>
+          <h2>{{dronelaw.title}}</h2>
+          <h4>{{dronelaw.subtitle1}}</h4>
+          <div class="datalaw">
+            <p>{{dronelaw.data1}}</p>
+            <p>{{dronelaw.data2}}</p>
+            <p>{{dronelaw.data3}}</p>
+            <p>{{dronelaw.data4}}</p>
+            <p>{{dronelaw.data5}}</p>
+            <p>{{dronelaw.data6}}</p>
+            <p>{{dronelaw.data7}}</p>
+            <p>{{dronelaw.data8}}</p>
+            <p>{{dronelaw.data9}}</p>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <h4>{{dronelaw.subtitle2}}</h4>
+          <p>{{dronelaw.data10}}</p>
+          <p>{{dronelaw.data11}}</p>
+          <p>{{dronelaw.data12}}</p>
+          <p>{{dronelaw.data13}}</p>
+          <p>{{dronelaw.data14}}</p>
+          <p>{{dronelaw.data15}}</p>
+          <p>{{dronelaw.data16}}</p>
+          <p>{{dronelaw.data17}}</p>
+          <p>{{dronelaw.data18}}</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

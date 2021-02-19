@@ -1,0 +1,35 @@
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let droneprofit of droneprofits | async">
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <div class="slide">
+          <div class="imagesize">
+            <img [src]="droneprofit.image" />
+          </div>
+          <h2>{{droneprofit.titl1}}</h2>
+          <h4>{{droneprofit.subtitle1}}</h4>
+          <p>{{droneprofit.data1}}</p>
+          <h4>{{droneprofit.subtitle2}}</h4>
+          <p>{{droneprofit.data2}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <h4>{{droneprofit.subtitle3}}</h4>
+          <p>{{droneprofit.data3}}</p>
+          <h2>{{droneprofit.title2}}</h2>
+          <h4>{{droneprofit.subtitle4}}</h4>
+          <p>{{droneprofit.data4}}</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

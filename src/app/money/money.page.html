@@ -1,0 +1,70 @@
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let money of moneys | async">
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <div class="silde">
+          <h2>{{money.title0}}</h2>
+          <p>{{money.data0}}</p>
+          <div class="imagesize">
+            <img [src]="money.image0" />
+          </div>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="slide">
+          <h2>{{money.title1}}</h2>
+          <h4>{{money.subtitle1}}</h4>
+          <p>{{money.data1}}</p>
+          <div class="imagesizedrone">
+            <img [src]="money.image1" />
+          </div>
+          <h4>{{money.subtitle1v2}}</h4>
+          <p>{{money.data1v2}}</p>
+          <div class="imagesizedrone">
+            <img [src]="money.image1v2" />
+          </div>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="slide">
+          <h4>{{money.subtitle2}}</h4>
+          <p>{{money.data2}}</p>
+          <div class="imagesizedrone">
+            <img [src]="money.image2" />
+          </div>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="slide">
+          <h2>{{money.title3}}</h2>
+          <h4>{{money.subtitle3v1}}</h4>
+          <p>{{money.data3v1}}</p>
+          <div class="imagesizedrone">
+            <img [src]="money.image3v1" />
+          </div>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="slide">
+          <h4>{{money.subtitle3v2}}</h4>
+          <p>{{money.data3v2}}</p>
+          <div class="imagesizedrone">
+            <img [src]="money.image3v2" />
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border" mode="md" [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="md"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let dronemean of dronemeans | async">
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <div class="slide">
+          <div class="imagesize">
+            <img [src]="dronemean.image1" />
+          </div>
+          <h2>{{dronemean.title}}</h2>
+          <p>{{dronemean.data1}}</p>
+          <p>{{dronemean.data2}}</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <p>{{dronemean.data3}}</p>
+          <div class="imagesize">
+            <img [src]="dronemean.image2" />
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

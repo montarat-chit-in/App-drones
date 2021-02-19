@@ -1,5 +1,7 @@
 {
   "name": "projects-drone",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
